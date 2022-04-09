@@ -4,12 +4,13 @@ body {
     background-image: url(./carson-masterson-yuxr5ohFB-g-unsplash.jpg);
     background-size: cover;
 
+
     
 }
 
 header
 {
-    background-image: url(./sergio-alves-santos-PeDrafNlY2Y-unsplash.jpg);
+   /* background-image: url(./sergio-alves-santos-PeDrafNlY2Y-unsplash.jpg); */
     background-position: center;
     padding: 35px 5px;
     background-size: cover;
@@ -24,4 +25,8 @@ p {
     color: goldenrod;
     font-family: fantasy;
     font-style: oblique;
+}
+
+.container {
+ text-shadow: 1px 1px white;
 }
