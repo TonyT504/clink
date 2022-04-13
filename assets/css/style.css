@@ -10,8 +10,9 @@ body {
     background-image: url(./carson-masterson-yuxr5ohFB-g-unsplash.jpg);
     background-size: cover;
 
-
-    
+}
+body img {
+    opacity: .5;
 }
 
 header
@@ -28,9 +29,10 @@ header
 h2,
 h1,
 p {
-    color: goldenrod;
+    color: whitesmoke;
     font-family: fantasy;
     font-style: oblique;
+    font-weight: bolder;
 }
 
 
@@ -76,20 +78,7 @@ img {
     bottom: 0px 0px 5px 2px;
 }
 
-#slider.slides {
-    display: block;
-    width: 6000px;
-    height: 400px;
-    margin: left;
-    padding: 0;
-}
 
-#slider.slide {
-    float:left;
-    list-style-type: none;
-    width: 720px;
-    height: 400px;
-}
 
 .container {
  text-shadow: 1px 1px white;
