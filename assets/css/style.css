@@ -36,12 +36,15 @@ h2{
 
 
 h1,
+h3,
+h5,
 p {
-    color:snow;
+    color:#fffb22;
     font-family: fantasy;
     font-style: oblique;
     font-size: larger;
-
+    font-weight: 600;
+     text-align: center;
     
 }
 
