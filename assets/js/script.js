@@ -1,15 +1,18 @@
-const carouselSlide = document.querySelector('.carousel-slide');
+/* const carouselSlide = document.querySelector('.carousel-slide');
 const carouselImages = document.querySelectorAll ('.slide');
 
 const prevBtn = document.querySelector('#prevBtn');
 const nextBtn = document.querySelector('#nextBtn');
 
-let counter = 1
-//const size = carouselImages[0].clientWidth;
+let counter = 1 */
 
-//carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
-function handleNext(){
+////const size = carouselImages[0].clientWidth;
+
+////carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+
+/* function handleNext(){
     counter++;
     if (counter>carouselImages.length){counter=1}
 
@@ -23,16 +26,19 @@ carouselImages[counter-1].classList.remove("hidden")
 
 
 
-}
+} */
 
 
 
 
-nextBtn.addEventListener('click', () => {
-    console.log(carouselImages.length)
-    //debugger
-    //carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    counter++;
+/* nextBtn.addEventListener('click', () => {
+    console.log(carouselImages.length) */
+
+
+    ////debugger
+    ////carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    
+    /* counter++;
     if (counter>carouselImages.length){counter=1}
 
 
@@ -41,31 +47,60 @@ for (let index = 0; index < carouselImages.length; index++) {
     element.classList.add("hidden")
 }
 
-carouselImages[counter-1].classList.remove("hidden")
-    //carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+carouselImages[counter-1].classList.remove("hidden") */
 
-});
 
-prevBtn.addEventListener('click', () => {
-    //debugger
-   // carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    ////carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
-    counter--;
+/* });
+
+prevBtn.addEventListener('click', () => { */
+
+
+    ////debugger
+   //// carouselSlide.style.transition = "transform 0.4s ease-in-out";
+
+   
+   
+   /* counter--;
     if (counter<1){counter=carouselImages.length}
 
     for (let index = 0; index < carouselImages.length; index++) {
         const element = carouselImages[index];
         element.classList.add("hidden")
-    }
-    
-    carouselImages[counter-1].classList.remove("hidden")
-    //carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    } */
 
-});
+    
+    //carouselImages[counter-1].classList.remove("hidden")
+
+
+    ////carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+/* });
 
 setInterval(() => { 
     handleNext()
+}, 3000) */
 
 
+let slideIndex = [1,1];
+let slideId = ["mySlides1", "mySlides2",  "mySlides3",  "mySlides4",  "mySlides5"]
+showSlides(1, 0);
+showSlides(1, 1);
 
-}, 3000)
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+
+
