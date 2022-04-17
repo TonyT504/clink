@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clink</title>
+    
+</head>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Welcome to Clink</h2>
+
+<p>Input your age and click the button:</p>
+
+<input id="age" value="21" />
+
+<button onclick="myFunction()">Try it</button>
+
+<a style="visibility:hidden" id="oldenough"href="index.html">continue to site</a>
+<p id="date"></p>
+<script>
+    function getdate(){
+        const res=fetch("http://worldclockapi.com/api/json/est/now",{method:"get"}).then(res=>res.json()).then(function(arg){
+let date=document.getElementById("date")
+let jso=arg
+console.log(arg)
+let current= jso.currentDateTime
+current=current.slice(0,10)
+let d=new Date(current)
+d.setFullYear(d.getFullYear()-21)
+date.innerText="if you are born after "+ d.getMonth()+ "/"+ d.getDate()+"/"+d.getFullYear()+",then you are too young to drink"
+        })
+    }
+function myFunction() {
+  let voteable;
+  let age = Number(document.getElementById("age").value);
+  if (isNaN(age)) {
+    voteable = "Input is not a number";
+  } else {
+  if (age >=21){
+    document.getElementById("oldenough").style.visibility="visible"
+  } else{
+      alert("you are not old enough")
+document.getElementById("oldenough").style.visibility="hidden"
+  }
+
+  }
+}
+getdate()
+</script>
+
+</body>
+</html>
