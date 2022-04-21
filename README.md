@@ -12,3 +12,6 @@ Step 4: I then created a for loop with the index of 5 so when an alcohol type is
 
 Step 5: Then I created the get element by ID to get the "drinks" element from the HTML and the appenchild "drinkName1" to place it on the right of my screen.
 
+![Landing Page](https://github.com/TonyT504/clink/blob/main/Images/LandingPage.PNG)
+
+![Website](https://github.com/TonyT504/clink/blob/main/Images/Website.PNG)
