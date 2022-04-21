@@ -42,12 +42,15 @@ h2{
 
 
 h1,
+h3,
+h5,
 p {
-    color:snow;
+    color:#fffb22;
     font-family: fantasy;
     font-style: oblique;
     font-size: larger;
-
+    font-weight: 600;
+     text-align: center;
     
 }
 
@@ -148,41 +151,21 @@ img {vertical-align: middle;}
 
 .gin-info{
     display: flex;
-    width: 50%;
+    width: 70%;
 }
 
 .gin-slideshow{
     display: flex;
-    width: 50%;
+    width: 30%;
     
 }
 .gin{
-    display: flex;
+    display: block;
 }
 
-.gin-info{
-    display: flex;
-    width: 50%;
-}
+.drinks{
 
-.gin-slideshow{
-    display: flex;
-    width: 50%;
-    
-}
-.gin{
-    display: flex;
-}.gin-info{
-    display: flex;
-    width: 50%;
-}
+    color: goldenrod;
 
-.gin-slideshow{
-    display: flex;
-    width: 50%;
-    
-}
-.gin{
-    display: flex;
-}
 
+}
